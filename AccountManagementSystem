@@ -9,3 +9,45 @@ namespace AccountManagementModels
         public string Password { get; set; }
     }
 }
+
+
+using System;
+using System.Collections.Generic;
+using AccountManagementModels;
+
+namespace AccountManagementDataService
+{
+    public class AccountInMemoryData : IAccountDataService
+    {
+        private List<Account> accounts = new List<Account>();
+
+        public AccountInMemoryData()
+        {
+            accounts.Add(new Account
+            {
+                AccountId = Guid.NewGuid(),
+                Username = "admin",
+                Password = "admin123"
+            });
+
+            accounts.Add(new Account
+            {
+                AccountId = Guid.NewGuid(),
+                Username = "user",
+                Password = "user123"
+            });
+
+            accounts.Add(new Account
+            {
+                AccountId = Guid.NewGuid(),
+                Username = "guest",
+                Password = "guest123"
+            });
+        }
+
+        public List<Account> GetAccounts()
+        {
+            return accounts;
+        }
+    }
+}
