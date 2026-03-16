@@ -26,22 +26,22 @@ namespace AccountManagementDataService
             accounts.Add(new Account
             {
                 AccountId = Guid.NewGuid(),
-                Username = "admin",
-                Password = "admin123"
+                Username = "laurent",
+                Password = "laurent03"
             });
 
             accounts.Add(new Account
             {
                 AccountId = Guid.NewGuid(),
-                Username = "user",
-                Password = "user123"
+                Username = "lcdimapelis",
+                Password = "lcdimapelis03"
             });
 
             accounts.Add(new Account
             {
                 AccountId = Guid.NewGuid(),
-                Username = "guest",
-                Password = "guest123"
+                Username = "juancho",
+                Password = "juancjo30"
             });
         }
 
